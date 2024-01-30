@@ -1,0 +1,55 @@
+html,
+body,
+#root {
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+#root section {
+  height: 100%;
+}
+
+.controls {
+  padding: 10px;
+  font-size: 30px;
+}
+
+.controls button {
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.debug {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #000;
+  z-index: 9999;
+}
+
+.editor {
+  padding: 10px;
+  font-weight: bold;
+  line-height: 2em;
+  overflow-y: scroll;
+  height: 80%;
+}
+
+*:focus {
+  outline: none;
+}
+
+.flip_H {
+  transform: scale(-1, 1);
+}
+
+.flip_V {
+  transform: scale(1, -1);
+  color: green;
+}
