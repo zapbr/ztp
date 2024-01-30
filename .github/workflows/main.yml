@@ -47,4 +47,17 @@ jobs:
           ./service/**
           ./assets
           ./assets/**
+
+    - name: 📂 Sync Service files
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        server: ftp.zhp.com.br
+        username: gdeploy@zhp.com.br
+        password: ${{ secrets.ftp_password }}
+        local-dir: ./www/service/
+        server-dir: /public_html/ztp/service/       
+        exclude: |
+          **/.git*
+          **/.git*/**
+          ./.json
           
