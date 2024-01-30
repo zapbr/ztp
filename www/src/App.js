@@ -23,7 +23,7 @@ function App() {
   }
 
   const save = () => {
-    axios.post('http://192.168.0.9/service/save.php', {
+    axios.post('/service/save.php', {
       font: fntSize,
       speed: roller,
       text: document.getElementById('editorBox').innerHTML,
@@ -34,7 +34,7 @@ function App() {
   }
 
   useEffect(() => {
-    axios.get('http://192.168.0.9/service/index.php').then((response) => {
+    axios.get('service/index.php').then((response) => {
       console.log(response)
       if (response.data) {
         setFntSize(response.data.font || 0);
