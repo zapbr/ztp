@@ -34,7 +34,7 @@ jobs:
         username: photo-deploy@henrique.photos
         password: ${{ secrets.ftp_password }}
         local-dir: ./www/build/
-        server-dir: /home2/zapbr/public_html/ztp/
+        server-dir: ../public_html/ztp/
         exclude: |
           **/.git*
           **/.git*/**
