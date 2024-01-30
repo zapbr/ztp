@@ -3,6 +3,9 @@ on:
     branches:
       - prod
 name: 🚀 Deploy website on push
+env:
+  PUBLIC_URL: "https://www.zhp.com.br/ztp/"
+  
 jobs:
   web-deploy:
     name: 🎉 Deploy
