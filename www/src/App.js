@@ -23,7 +23,7 @@ function App() {
   }
 
   const save = () => {
-    axios.post('/service/save.php', {
+    axios.post(`${process.env.PUBLIC_URL}/service/save.php`, {
       font: fntSize,
       speed: roller,
       text: document.getElementById('editorBox').innerHTML,
@@ -34,7 +34,7 @@ function App() {
   }
 
   useEffect(() => {
-    axios.get('service/index.php').then((response) => {
+    axios.get(`${process.env.PUBLIC_URL}/service/index.php`).then((response) => {
       console.log(response)
       if (response.data) {
         setFntSize(response.data.font || 0);
@@ -168,7 +168,7 @@ function App() {
         &nbsp;
         <button onClick={save}><i className="fa fa-floppy-o" aria-hidden="true"></i></button>
       </div>
-
+      <pre>{process.env.PUBLIC_URL}</pre>
       <div
         id='editorBox'
         contentEditable="true"
