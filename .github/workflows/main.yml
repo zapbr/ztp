@@ -59,4 +59,4 @@ jobs:
         exclude: |
           **/.git*
           **/.git*/**
-          data.json
+          ./www/service/*.json
