@@ -168,7 +168,6 @@ function App() {
         &nbsp;
         <button onClick={save}><i className="fa fa-floppy-o" aria-hidden="true"></i></button>
       </div>
-      <pre>{process.env.PUBLIC_URL}</pre>
       <div
         id='editorBox'
         contentEditable="true"
